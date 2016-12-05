@@ -65,7 +65,7 @@ var state = {
 
 // Event handlers
 // When start button is submitted
-$('.startpage, button').click(function(event) {
+$('#startButton').click(function(event) {
 	event.preventDefault();	
 $('#div2').removeclass("hidden");
 // $('.startpage').addclass()

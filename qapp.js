@@ -49,8 +49,8 @@ var state = {
     wrongAnsMsg: "Doh!",
 
 
-}],
-}
+}]
+
 
     // Questions
     // Answers
@@ -63,11 +63,23 @@ var state = {
 // State manipulation functions
 // Render functions
 
+
+// displays question text inside of span.
+//displays question responses inside of Ul,li.
+
+function createQuizItems(state, index) {
+  $('.question').html(state.questions[index].questionText);
+}
+
+
 // Event handlers
 // When start button is submitted
 $('#startButton').click(function(event) {
 	event.preventDefault();	
-$('#div2').removeclass("hidden");
+    console.log('test');
+$('#div2').removeClass("hidden");
+$('#div1').addClass("hidden");
+createQuizItems(state, 0);
 // $('.startpage').addclass()
 	//hide .startpage and .final and only show .qustions div
 });
